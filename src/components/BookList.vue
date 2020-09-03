@@ -2,7 +2,7 @@
   <div>
     <h1>{{ title }}</h1>
     <ul>
-      <book-item>
+      <book-item v-for="book in books" :key="book.isbn" :book="book">
       </book-item>
     </ul>
   </div>
