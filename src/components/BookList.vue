@@ -2,7 +2,9 @@
   <div>
     <h1>{{ title }}</h1>
     <ul>
-      <li v-for="book in books" :key="book.isbn">{{ book.title }}; {{ book.author}}</li>
+      <li v-for="book in books" :key="book.isbn">
+        {{ book.title }}:{{book.author}}
+      </li>
     </ul>
   </div>
 </template>
@@ -28,8 +30,7 @@ export default {
 </script>
 
 <style scoped>
-h1,
-h2 {
+h1,h2 {
   font-weight: normal;
 }
 ul {
@@ -38,6 +39,6 @@ ul {
 }
 li {
   display: block;
-  margin: 10px;
+  margin: 0 10px;
 }
 </style>
